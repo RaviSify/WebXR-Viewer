@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Variant Launch ThreeJS Example</title>
+ 
+    <!-- REPLACE WITH YOUR SDK KEY TAG FROM https://launchar.app -->
+    <script src="https://launchar.app/sdk/v1?key=Nz6gt6tr1HL2tAuwHsnFaaZyDeTdELHp&redirect=true"></script>
+    <!-- / REPLACE WITH YOUR SDK KEY TAG FROM https://launchar.app -->
+ 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webxr Ar</title>
-    
-    <script type="module" crossorigin src="/assets/index.105348d4.js"></script>
-    <link rel="stylesheet" href="/assets/index.0b1393fc.css">
+    <link rel="icon" href="/favicon.ico" />
+    <meta 
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script type="module" crossorigin src="/assets/index-6d032979.js"></script>
+    <link rel="stylesheet" href="/assets/index-0474b6a7.css">
   </head>
   <body>
-    <!-- <script type="module" src="/cube/normal-cube.js"></script> -->
-    
-
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.147/build/three.module.js"></script>
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ar.js@2.2.2/dist/ar.min.js"></script>
-    
-    <!-- <script type="module" src="/cube/xr-hit-cube.js"></script> -->
-    <!-- <script type="module" src="/model/xr-hit-models.js"></script> -->
-    <!-- <script type="module" src="/model/xr-domOverlay.js"></script> -->
-
-    <div id="overlay-content">
-      <div id="container">
-        <label for="model-select">Choose Model</label>
-        <select id="model-select">
-          <option value="chair">Chair</option>
-          <option value="bookcase">Bookcase</option>
-        </select>
+    <div id="overlay">
+      <div id="tracking-prompt"><img src="hand.png" /></div>
+      <div id="instructions">Tap to grow</div>
+    </div>
+    <div id="app">
+      <a href="https://launch.variant3d.com"
+        ><img id="variant-logo" alt="WebXR on iOS" src="favicon.ico"
+      /></a>
+      <h2>Variant Launch ThreeJS Example</h2>
+      <div id="ar-not-supported">
+        <p>
+          WebXR Not Supported. Open this page on iOS or Android to view the
+          example.
+        </p>
+        <p>
+          For documentation & support, visit
+          <a href="https://launch.variant3d.com/docs"
+            >https://launch.variant3d.com</a
+          >.
+        </p>
+        <img id="qr-code" />
       </div>
     </div>
-    <!-- Comment style display none for dom overlay to work in style.css file -->
+    
   </body>
 </html>
